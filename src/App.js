@@ -1,11 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import DataFetching from './components/DataFetching';
+import ProductContextProvider from './context/ProductContextProvider'
+
 
 function App() {
   return (
-    <div className="App">
-     React
-    </div>
+    <ProductContextProvider>
+        <DataFetching />
+    </ProductContextProvider>
+    
+   
   );
 }
 
