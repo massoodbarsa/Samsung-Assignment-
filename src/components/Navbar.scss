@@ -8,7 +8,8 @@
     background: #263849;
     padding: 2px 1rem;
     display: flex;
-    justify-content: flex-end;
+    // flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin-left: 200px;
 
@@ -23,7 +24,11 @@
         background-color: #fff;
     }
 
-   
+    &__logo img {
+        margin-left: 5rem;
+        width: 150px;
+        height: 70px;
+    }
 
     &__items {
         margin-left: 1.5rem;
