@@ -12,7 +12,10 @@ export default function DataFetching() {
         axios.get(api)
             .then(res => {
                 const productList = res.data.response.resultData
-                context.setProducts(productList)
+                const products = Object.keys(productList).map(item => {
+                    return productList[item]
+                })
+                context.setProducts(products)
 
             })
             .catch(err => {

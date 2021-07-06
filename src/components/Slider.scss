@@ -1,0 +1,23 @@
+.section-center {
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 50vw;
+    height: 650px;
+    max-width: 70%;
+    position: relative;
+    overflow: hidden;
+
+    &__img-container {
+        text-align: center;
+    }
+
+    &__img {
+        border-radius: 5%;
+        height: 60vh;
+        width: 500px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        border: 4px solid var(--clr-grey-8);
+        box-shadow: var(--dark-shadow);
+    }
+}
