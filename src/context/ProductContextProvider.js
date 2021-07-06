@@ -11,7 +11,7 @@ export default class ProductContextProvider extends Component {
 
     setProducts = (products) => {
         this.setState({
-            productList: products
+            productList:products
         })
         console.log(this.state.productList);
     }

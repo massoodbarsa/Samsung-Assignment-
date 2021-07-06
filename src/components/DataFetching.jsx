@@ -22,7 +22,7 @@ export default function DataFetching() {
     }, [])
     return (
         <div>
-            data
+            
         </div>
     )
 }
