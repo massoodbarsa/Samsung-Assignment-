@@ -2,6 +2,7 @@ import React from 'react'
 import { CardContent, CardActions, Card, CardActionArea, CardMedia, Button, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Cards.scss'
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
 
 export default function Cards({ data }) {
 
-    const { fmyEngName, modelList } = data
+    const { fmyEngName, modelList ,familyRecord} = data
 
     const model = modelList.map(item => {
         const arr = []
@@ -24,9 +25,11 @@ export default function Cards({ data }) {
     })
 
     return (
-        <div className='container' onClick={() => console.log('clicked')}>
+        <div className='container' >
+            <Link to={"/product/" + familyRecord} >
             <h2>{fmyEngName}</h2>
             <img src={model[0][0].thumbUrl} alt={fmyEngName} />
+            </Link>
 
         </div>
     )

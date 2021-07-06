@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { ProductContext } from '../context/ProductContextProvider'
 import Cards from '../components/Cards'
 import './Home.scss'
-import Slider from '../components/Slider'
+
+// import Slider from '../components/Slider'
 
 export default function Home() {
 
@@ -13,13 +14,10 @@ export default function Home() {
     return (
         <div className='grid_list'>
             {
-                productList.map(item => {
-                    return item.map(i => {
-                        return <Cards data={i} />
-                    })
+                productList.map((item, index) => {
+                    return <Cards key={index} data={item} />
                 })
             }
-            {/* <Slider data = {productList}/> */}
         </div>
     )
 }
