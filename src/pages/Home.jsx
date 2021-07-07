@@ -3,8 +3,6 @@ import { ProductContext } from '../context/ProductContextProvider'
 import Cards from '../components/Cards'
 import './Home.scss'
 
-// import Slider from '../components/Slider'
-
 export default function Home() {
 
     const context = useContext(ProductContext)

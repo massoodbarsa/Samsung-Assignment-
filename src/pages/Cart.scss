@@ -1,3 +1,18 @@
-h2{
-    margin-top: 300px;
+.shop-container {
+    padding: 2rem 10rem;
+
+    h2 {
+        margin: 100px auto;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            width: 100px;
+        }
+
+    }
 }
