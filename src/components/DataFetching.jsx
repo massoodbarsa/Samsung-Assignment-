@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import axios from 'axios'
 import { ProductContext } from '../context/ProductContextProvider'
-
 
 export default function DataFetching() {
 
@@ -17,7 +16,6 @@ export default function DataFetching() {
             .catch(err => {
                 console.log(err);
             })
-
     }, [])
     return (
         <div>

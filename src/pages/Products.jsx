@@ -15,6 +15,7 @@ export default function Products() {
     )
 
     const product = products[0]
+    
     return (
         <div className='product-container'>
             <section>

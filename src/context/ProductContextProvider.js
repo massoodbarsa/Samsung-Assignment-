@@ -22,8 +22,6 @@ export default class ProductContextProvider extends Component {
         this.setState({
             shoppingCart: products
         })
-
-        // console.log(this.state);
     }
 
     deleteFromShoppingCart = (id) => {
@@ -38,7 +36,7 @@ export default class ProductContextProvider extends Component {
     valueObj = {
         setProducts: this.setProducts,
         addToShoppingCart: this.addToShoppingCart,
-        deleteFromShoppingCart:this.deleteFromShoppingCart
+        deleteFromShoppingCart: this.deleteFromShoppingCart
     }
     render() {
         return (

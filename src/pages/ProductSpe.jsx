@@ -124,7 +124,6 @@ export default function ProductSpe({ data }) {
                             color="primary" />
                 }
                 <p>{promotion}</p>
-
             </section>
         </div>
     )

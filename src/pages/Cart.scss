@@ -6,13 +6,13 @@
     }
 
     &__items {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
         border-bottom: 1px solid #d8dbdf;
         padding: 1rem;
-
+        grid-gap: 5rem;
+        width: 80%;
 
         img {
             width: 100px;
@@ -32,6 +32,17 @@
             display: flex;
             justify-items: flex-end;
             position: relative;
+        }
+
+        &__trash{
+            display: flex;
+            justify-items: flex-end;
+            position: relative;
+            color: rgb(224, 54, 68);
+            width: 10px;
+            font-size: 20px;
+            top: -7px;
+            cursor: pointer;
         }
 
     }

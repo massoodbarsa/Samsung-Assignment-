@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ProductContext } from '../context/ProductContextProvider'
-import { Button } from '@material-ui/core';
-
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Cart.scss'
 
 export default function Cart() {
@@ -22,20 +22,25 @@ export default function Cart() {
 
                             <section className='shop-container__items__desc'>
                                 <img src={url} alt="" />
+
+                            </section>
+                            <section>
                                 <p>{name}</p>
                             </section>
                             <section className='shop-container__items__price'>
                                 <p>${price}</p>
                             </section>
 
-                            <Button
-                                variant='outlined'
-                                color="secondary"
-                                className='btn'
-                                onClick={() => context.deleteFromShoppingCart(id)}
-                            >
-                                Delete
-                            </Button>
+                            <section className='shop-container__items__trash' >
+
+                                <FontAwesomeIcon
+                                    icon={faTrashAlt}
+                                    // size='2x'
+                                    onClick={() => context.deleteFromShoppingCart(id)}
+
+                                />
+
+                            </section>
                         </div>
                     )
                 })
