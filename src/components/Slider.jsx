@@ -1,10 +1,11 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import './Slider.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default function Slider({ data }) {
 
     const { galleryImage } = data
-    console.log(galleryImage);
 
     return (
         <div>
@@ -14,10 +15,7 @@ export default function Slider({ data }) {
                     {
                         galleryImage.map((item, index) => {
 
-                            console.log(item);
-
                             return (
-
                                 <Carousel.Item key={index} className='section-center__img-container'>
                                     <Carousel.Caption>
                                     </Carousel.Caption>

@@ -8,14 +8,12 @@
     background: #263849;
     padding: 2px 1rem;
     display: flex;
-    // flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-left: 200px;
 
     .MuiButton-root {
         color: #fff;
-        border-color: var(--clr-grey-9);
     }
 
     .MuiButton-root:hover {

@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 import Products from './pages/Products';
 import Navbar from './components/Navbar';
 
-
 function App() {
 
   return (
