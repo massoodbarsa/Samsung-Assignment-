@@ -6,10 +6,12 @@ import Rating from '@material-ui/lab/Rating';
 import { Box, Chip, Divider, Button } from '@material-ui/core';
 import { faMemory, faTv, faMobile, faCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ProductSpe({ data }) {
 
     const context = useContext(ProductContext)
+    const uuId = uuidv4()
 
     const {
         displayName,
@@ -93,9 +95,11 @@ export default function ProductSpe({ data }) {
                             className='btn'
                             onClick={() => context.addToShoppingCart
                                 ([
+                                   
                                     displayName,
                                     thumbUrl,
-                                    price
+                                    price,
+                                    uuId
                                 ])}
                         >
                             Buy

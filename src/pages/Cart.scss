@@ -7,11 +7,31 @@
 
     &__items {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        border-bottom: 1px solid #d8dbdf;
+        padding: 1rem;
+
 
         img {
             width: 100px;
+        }
+
+        &__desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                margin-left: 200px;
+            }
+        }
+
+        &__price {
+            display: flex;
+            justify-items: flex-end;
+            position: relative;
         }
 
     }
