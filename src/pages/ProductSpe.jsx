@@ -94,13 +94,14 @@ export default function ProductSpe({ data }) {
                             color="primary"
                             className='btn'
                             onClick={() => context.addToShoppingCart
-                                ([
-                                   
-                                    displayName,
-                                    thumbUrl,
-                                    price,
-                                    uuId
-                                ])}
+                                (
+                                    {
+                                        name: displayName,
+                                        url: thumbUrl,
+                                        price: price,
+                                        id: uuId
+                                    }
+                                )}
                         >
                             Buy
                         </Button>

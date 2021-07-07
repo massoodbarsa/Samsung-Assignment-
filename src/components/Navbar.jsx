@@ -17,14 +17,11 @@ const StyledBadge = withStyles((theme) => ({
 }))(Badge);
 
 
-
 export default function Navbar() {
 
     const context = useContext(ProductContext)
 
     const { shoppingCart } = context
-
-    console.log(shoppingCart.length);
 
     return (
         <div className='navigation'>
