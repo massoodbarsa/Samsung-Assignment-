@@ -62,16 +62,20 @@
         }
 
         &__forthLine {
-            @extend .flex-row;
+            @extend .flex-column;
             border-top: 1px solid cadetblue;
             width: 80%;
+            align-items:center;
+            padding: 20px;
+.btn{
+    width: 200px;
+}
 
             h5 {
                 position: relative;
-                left: 300px;
-                top: 30px;
                 font-size: x-large;
                 font-weight: 300;
+                margin-bottom: 50px;
 
             }
         }

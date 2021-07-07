@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from '../components/Slider';
 import Rating from '@material-ui/lab/Rating';
-import { Box, Chip, Divider } from '@material-ui/core';
+import { Box, Chip, Divider, Button } from '@material-ui/core';
 import { faMemory, faTv, faMobile } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -71,8 +71,14 @@ export default function ProductSpe({ data }) {
                 <div className='productSpe__spe__forthLine'>
 
 
-                    <h5>$ {price} </h5>
+                    <section><h5>$ {price} </h5></section>
+                    <section>
+                        <Button variant="contained" color="primary" className='btn'>
+                            Buy
+                        </Button>
+                    </section>
                 </div>
+
 
             </section>
             <Divider orientation="vertical" flexItem />
