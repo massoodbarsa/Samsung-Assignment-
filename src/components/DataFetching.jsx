@@ -16,7 +16,7 @@ export default function DataFetching() {
             .catch(err => {
                 console.log(err);
             })
-    }, [])
+    })
     return (
         <div>
 

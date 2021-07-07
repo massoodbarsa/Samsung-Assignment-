@@ -50,11 +50,9 @@ export default function ProductSpe({ data }) {
 
                 <div className='productSpe__spe__secondLine'>
                     <p className='modelCode'> {modelCode} </p>
-                    <p>
                         <Box component="fieldset" mb={3} borderColor="transparent" >
-                            <Rating name="read-only" value={ratings.toString()} precision={0.5} readOnly />
+                            <Rating name="read-only" value={parseFloat(ratings)} precision={0.1} readOnly />
                         </Box>
-                    </p>
                     <p> {ratings} ({reviewCount})</p>
                 </div>
 

@@ -15,7 +15,7 @@ export default function Cards({ data }) {
     return (
         <div className='container' >
             <Link to={"/product/" + familyRecord} >
-                <h2>{fmyEngName}</h2>
+                <h4>{fmyEngName}</h4>
                 <img src={model[0][0].thumbUrl} alt={fmyEngName} className='container__image' />
             </Link>
         </div>
