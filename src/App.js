@@ -2,7 +2,7 @@ import './App.css';
 import DataFetching from './components/DataFetching';
 import ProductContextProvider from './context/ProductContextProvider'
 import Home from '../src/pages/Home'
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Products from './pages/Products';
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
