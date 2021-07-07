@@ -44,6 +44,13 @@
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
+
+            .modelCode {
+                color: #8a8d92;
+                font-size: small;
+                position: relative;
+                top: 5px
+            }
         }
 
         &__thirdLine {
@@ -65,11 +72,12 @@
             @extend .flex-column;
             border-top: 1px solid cadetblue;
             width: 80%;
-            align-items:center;
+            align-items: center;
             padding: 20px;
-.btn{
-    width: 200px;
-}
+
+            .btn {
+                width: 200px;
+            }
 
             h5 {
                 position: relative;

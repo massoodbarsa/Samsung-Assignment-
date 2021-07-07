@@ -41,7 +41,7 @@ export default function ProductSpe({ data }) {
                 </div>
 
                 <div className='productSpe__spe__secondLine'>
-                    <p>{modelCode} </p>
+                    <p className='modelCode'> {modelCode} </p>
                     <p>
                         <Box component="fieldset" mb={3} borderColor="transparent" >
                             <Rating name="read-only" value={ratings} precision={0.5} readOnly />
@@ -73,7 +73,7 @@ export default function ProductSpe({ data }) {
 
                     <section><h5>$ {price} </h5></section>
                     <section>
-                        <Button variant="contained" color="primary" className='btn'>
+                        <Button variant='outlined' color="primary" className='btn'>
                             Buy
                         </Button>
                     </section>
