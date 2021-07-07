@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ProductContext } from '../context/ProductContextProvider'
+
 import Slider from '../components/Slider';
 import Rating from '@material-ui/lab/Rating';
 import { Box, Chip, Divider, Button } from '@material-ui/core';
-import { faMemory, faTv, faMobile ,faCircle} from '@fortawesome/free-solid-svg-icons'
+import { faMemory, faTv, faMobile, faCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ProductSpe({ data }) {
+
+    const context = useContext(ProductContext)
 
     const {
         displayName,
@@ -18,7 +22,8 @@ export default function ProductSpe({ data }) {
         fmyChipList,
         usp,
         pviSubtypeName,
-        storePromotions
+        storePromotions,
+        thumbUrl
     } = data
 
     let promotion = null
@@ -71,8 +76,8 @@ export default function ProductSpe({ data }) {
 
                     <Divider orientation="vertical" flexItem />
                     <section>
-                    <FontAwesomeIcon icon={faCircle} size='3x' color={fmyChipList[0].fmyChipCode}/>
-                    <p>{fmyChipList[0].fmyChipLocalName}</p>
+                        <FontAwesomeIcon icon={faCircle} size='3x' color={fmyChipList[0].fmyChipCode} />
+                        <p>{fmyChipList[0].fmyChipLocalName}</p>
 
                     </section>
 
@@ -82,7 +87,17 @@ export default function ProductSpe({ data }) {
                         <h5>$ {price} </h5>
                     </section>
                     <section>
-                        <Button variant='outlined' color="primary" className='btn'>
+                        <Button
+                            variant='outlined'
+                            color="primary"
+                            className='btn'
+                            onClick={() => context.addToShoppingCart
+                                ([
+                                    displayName,
+                                    thumbUrl,
+                                    price
+                                ])}
+                        >
                             Buy
                         </Button>
                     </section>

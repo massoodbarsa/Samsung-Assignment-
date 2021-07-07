@@ -15,7 +15,6 @@ export default function Products() {
     )
 
     const product = products[0]
-    console.log(product.modelList);
     return (
         <div className='product-container'>
             <section>

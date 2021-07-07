@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ProductContext } from '../context/ProductContextProvider'
+
 import './Navbar.scss'
 import { NavLink } from 'react-router-dom'
-import { Button } from '@material-ui/core';
+import { Button, IconButton, Badge } from '@material-ui/core';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { withStyles } from '@material-ui/core/styles';
+
+const StyledBadge = withStyles((theme) => ({
+    badge: {
+        right: -3,
+        top: 13,
+        border: `2px solid ${theme.palette.background.paper}`,
+        padding: '0 3px',
+    },
+}))(Badge);
+
 
 
 export default function Navbar() {
+
+    const context = useContext(ProductContext)
+
+    const { shoppingCart } = context
+
+    console.log(shoppingCart.length);
+
     return (
         <div className='navigation'>
             <div className='navigation__logo'>
@@ -13,6 +34,15 @@ export default function Navbar() {
             <div className='navigation__items'>
                 <ul>
                     <li><NavLink to='/'><Button variant="outlined" color="primary">Home</Button></NavLink></li>
+                    <li>
+                        {shoppingCart.length > 0 && <IconButton aria-label="cart" color='primary'>
+                            <StyledBadge badgeContent={shoppingCart.length} color="secondary">
+
+                                <NavLink to='/cart'>  <ShoppingCartIcon /></NavLink>
+
+                            </StyledBadge>
+                        </IconButton>}
+                    </li>
                 </ul>
             </div>
         </div>

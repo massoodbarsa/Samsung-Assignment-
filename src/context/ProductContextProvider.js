@@ -6,7 +6,8 @@ export const ProductContext = createContext()
 export default class ProductContextProvider extends Component {
 
     state = {
-        productList: []
+        productList: [],
+        shoppingCart:[]
     }
 
     setProducts = (productList) => {
@@ -15,8 +16,19 @@ export default class ProductContextProvider extends Component {
         })
     }
 
+    addToShoppingCart = (product) => {
+        const products = this.state.shoppingCart
+        products.push(product)
+        this.setState({
+            shoppingCart:products
+        })
+
+        console.log(this.state);
+    }
+
     valueObj = {
-        setProducts: this.setProducts
+        setProducts: this.setProducts,
+        addToShoppingCart:this.addToShoppingCart
     }
     render() {
         return (
