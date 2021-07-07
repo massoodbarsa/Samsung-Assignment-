@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { ProductContext } from '../context/ProductContextProvider'
 import './Products.scss'
 import ProductSpe from './ProductSpe'
+
 export default function Products() {
 
     const context = useContext(ProductContext)

@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from '../components/Slider';
 import Rating from '@material-ui/lab/Rating';
 import { Box, Chip, Divider, Button } from '@material-ui/core';
-import { faMemory, faTv, faMobile } from '@fortawesome/free-solid-svg-icons'
+import { faMemory, faTv, faMobile ,faCircle} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ProductSpe({ data }) {
@@ -18,7 +18,8 @@ export default function ProductSpe({ data }) {
         fmyChipList,
         usp,
         pviSubtypeName,
-        storePromotions } = data
+        storePromotions
+    } = data
 
     let promotion = null
     if (storePromotions) {
@@ -28,11 +29,11 @@ export default function ProductSpe({ data }) {
 
     return (
         <div className='productSpe'>
+
             <section className='productSpe__slider'>
-
                 <Slider data={data} />
-
             </section>
+
             <section className='productSpe__spe'>
 
                 <div className='productSpe__spe__firstLine'>
@@ -67,11 +68,19 @@ export default function ProductSpe({ data }) {
                                 <p>{usp[0]} - {usp[1]}</p>
                             </section>
                     }
+
+                    <Divider orientation="vertical" flexItem />
+                    <section>
+                    <FontAwesomeIcon icon={faCircle} size='3x' color={fmyChipList[0].fmyChipCode}/>
+                    <p>{fmyChipList[0].fmyChipLocalName}</p>
+
+                    </section>
+
                 </div>
                 <div className='productSpe__spe__forthLine'>
-
-
-                    <section><h5>$ {price} </h5></section>
+                    <section>
+                        <h5>$ {price} </h5>
+                    </section>
                     <section>
                         <Button variant='outlined' color="primary" className='btn'>
                             Buy
@@ -79,8 +88,8 @@ export default function ProductSpe({ data }) {
                     </section>
                 </div>
 
-
             </section>
+
             <Divider orientation="vertical" flexItem />
 
             <section className='productSpe__info'>
