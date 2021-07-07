@@ -17,7 +17,6 @@ export default function Products() {
     console.log(product.modelList);
     return (
         <div className='product-container'>
-            <h2>{product.fmyEngName}</h2>
             <section>
                 {
                     product.modelList.map((item, index) => {

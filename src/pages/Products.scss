@@ -23,6 +23,10 @@
 
     &__slider {
         width: 40%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__spe {
@@ -59,9 +63,16 @@
 
         &__forthLine {
             @extend .flex-row;
+            border-top: 1px solid cadetblue;
+            width: 80%;
 
             h5 {
-                margin-right: 200px;
+                position: relative;
+                left: 300px;
+                top: 30px;
+                font-size: x-large;
+                font-weight: 300;
+
             }
         }
     }
@@ -71,5 +82,12 @@
         padding: 1rem;
         // margin-left: 1rem;
         align-items: center;
+
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: small;
+            margin-top: 1rem;
+            color: cadetblue;
+        }
     }
 }

@@ -7,9 +7,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ProductSpe({ data }) {
 
-    const { displayName, thumbUrlAlt, modelCode, reviewCount, ratings, price, stockStatusText, fmyChipList, usp, pviSubtypeName, storePromotions } = data
+    const {
+        displayName,
+        thumbUrlAlt,
+        modelCode,
+        reviewCount,
+        ratings,
+        price,
+        stockStatusText,
+        fmyChipList,
+        usp,
+        pviSubtypeName,
+        storePromotions } = data
 
-    console.log(usp[0]);
+    let promotion = null
+    if (storePromotions) {
+        const promotions = storePromotions.map(i => i)
+        promotion = promotions[0].promotionText.slice(3).slice(0, -4);
+    }
+
     return (
         <div className='productSpe'>
             <section className='productSpe__slider'>
@@ -52,11 +68,10 @@ export default function ProductSpe({ data }) {
                             </section>
                     }
                 </div>
-
                 <div className='productSpe__spe__forthLine'>
+
+
                     <h5>$ {price} </h5>
-
-
                 </div>
 
             </section>
@@ -72,7 +87,10 @@ export default function ProductSpe({ data }) {
                         : <Chip
                             label=" Available"
                             color="primary" />
-                }            </section>
+                }
+                <p>{promotion}</p>
+
+            </section>
         </div>
     )
 }
