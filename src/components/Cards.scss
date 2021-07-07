@@ -1,5 +1,5 @@
 .container {
-    box-sizing: border-box;
+    // box-sizing: border-box;
     border: 1px solid #f6f6f6;
     padding: 10px 5px;
     border-radius: 8px;
@@ -8,16 +8,29 @@
     text-align: center;
     background-color: #f4f4f4;
 
-    &__image{
-        width: 50%;
-        transition:  ease-in-out;
+    &:hover {
+        animation: glow 1s infinite alternate;
     }
 
-    h2{
+    &__image {
+        width: 50%;
+    }
+
+    h2 {
         color: #263849
     }
 
-    a:hover{
+    a:hover {
         text-decoration: none;
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px -10px #81c8ca;
+    }
+
+    to {
+        box-shadow: 0 0 10px 10px #81c8ca;
     }
 }
