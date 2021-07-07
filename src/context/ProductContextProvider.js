@@ -19,13 +19,13 @@ export default class ProductContextProvider extends Component {
     addToShoppingCart = (product) => {
         const products = this.state.shoppingCart
         products.push(product)
+        
         this.setState({
             shoppingCart: products
         })
     }
 
     deleteFromShoppingCart = (id) => {
-
         const shoppingCart = this.state.shoppingCart.filter(item => item.id !== id)
 
         this.setState({
