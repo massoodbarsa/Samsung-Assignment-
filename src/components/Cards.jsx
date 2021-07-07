@@ -30,16 +30,6 @@ export default function Cards({ data }) {
             <h2>{fmyEngName}</h2>
             <img src={model[0][0].thumbUrl} alt={fmyEngName} className='container__image'/>
             </Link>
-
         </div>
     )
 }
-
-
-{/* <div className='container'>
-<h2>{data.fmyMarketingName}</h2>
-{
-    modelList.map(item)
-}
-<img src="https://images.samsung.com/is/image/samsung/nl/galaxy-note20/gallery/nl-galaxy-tab-s7-t875-sm-t875nzkaeub-backmysticblack-thumb-278814609" alt="" />
-</div> */}
