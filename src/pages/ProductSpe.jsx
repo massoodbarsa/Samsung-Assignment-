@@ -50,9 +50,9 @@ export default function ProductSpe({ data }) {
 
                 <div className='productSpe__spe__secondLine'>
                     <p className='modelCode'> {modelCode} </p>
-                        <Box component="fieldset" mb={3} borderColor="transparent" >
-                            <Rating name="read-only" value={parseFloat(ratings)} precision={0.1} readOnly />
-                        </Box>
+                    <Box component="fieldset" mb={3} borderColor="transparent" >
+                        <Rating name="read-only" value={parseFloat(ratings)} precision={0.1} readOnly />
+                    </Box>
                     <p> {ratings} ({reviewCount})</p>
                 </div>
 
@@ -116,10 +116,15 @@ export default function ProductSpe({ data }) {
                         ? <Chip
                             label="Out of stock"
                             color="secondary"
+                            className='chip'
                         />
                         : <Chip
                             label=" Available"
-                            color="primary" />
+                            color="primary"
+                            className='chip'
+                        />
+
+
                 }
                 <p>{promotion}</p>
             </section>
