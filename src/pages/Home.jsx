@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { ProductContext } from '../context/ProductContextProvider'
 import Cards from '../components/Cards'
 import './Home.scss'
