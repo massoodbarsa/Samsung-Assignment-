@@ -7,7 +7,8 @@ export default class ProductContextProvider extends Component {
 
     state = {
         productList: [],
-        shoppingCart: []
+        shoppingCart: [],
+        loader: false
     }
 
     setProducts = (productList) => {
@@ -19,7 +20,7 @@ export default class ProductContextProvider extends Component {
     addToShoppingCart = (product) => {
         const products = this.state.shoppingCart
         products.push(product)
-        
+
         this.setState({
             shoppingCart: products
         })
@@ -33,10 +34,16 @@ export default class ProductContextProvider extends Component {
         })
     }
 
+    handleLoader = (loader) => {
+        this.setState({
+            loader: loader
+        })
+    }
     valueObj = {
         setProducts: this.setProducts,
         addToShoppingCart: this.addToShoppingCart,
-        deleteFromShoppingCart: this.deleteFromShoppingCart
+        deleteFromShoppingCart: this.deleteFromShoppingCart,
+        handleLoader: this.handleLoader
     }
     render() {
         return (

@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { ProductContext } from '../context/ProductContextProvider'
 import Cards from '../components/Cards'
 import './Home.scss'
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 
 export default function Home() {
@@ -13,9 +14,10 @@ export default function Home() {
     return (
         <div className='grid_list'>
             {
-                productList.map((item, index) => {
+                !context.loader ? productList.map((item, index) => {
                     return <Cards key={index} data={item} />
                 })
+                    : <LinearProgress className='linearProgress' />
             }
         </div>
     )
