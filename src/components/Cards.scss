@@ -1,5 +1,4 @@
-.container {
-    // box-sizing: border-box;
+.cards-container {
     border: 1px solid #f6f6f6;
     padding: 10px 5px;
     border-radius: 8px;
@@ -16,8 +15,9 @@
         width: 50%;
     }
 
-    h4{
-        color: #263849
+    h4 {
+        color: #263849;
+        font-family: 'Times New Roman', Times, serif;
     }
 
     a:hover {
@@ -32,5 +32,14 @@
 
     to {
         box-shadow: 0 0 10px 10px #81c8ca;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .cards-container {
+        h4 {
+            font-size: smaller;
+        }
     }
 }

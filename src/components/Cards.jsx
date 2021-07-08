@@ -13,10 +13,10 @@ export default function Cards({ data }) {
     })
 
     return (
-        <div className='container' >
+        <div className='cards-container' >
             <Link to={"/product/" + familyRecord} >
                 <h4>{fmyEngName}</h4>
-                <img src={model[0][0].thumbUrl} alt={fmyEngName} className='container__image' />
+                <img src={model[0][0].thumbUrl} alt={fmyEngName} className='cards-container__image' />
             </Link>
         </div>
     )
