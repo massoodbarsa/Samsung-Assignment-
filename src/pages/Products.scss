@@ -111,12 +111,21 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .productSpe__spe__firstLine {
+        h5 {
+            font-size: small;
+        }
+
+    }
 
     .productSpe__spe__thirdLine,
     .productSpe__spe__secondLine {
         flex-direction: column;
         align-items: center;
 
+        p {
+            font-size: smaller;
+        }
     }
 
     .productSpe__spe__thirdLine {
@@ -127,4 +136,11 @@
     .productSpe__slider {
         text-align: left;
     }
+
+    .productSpe__spe__forthLine {
+        .btn {
+            width: 100px;
+        }
+    }
+
 }
