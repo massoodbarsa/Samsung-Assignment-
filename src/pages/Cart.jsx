@@ -24,7 +24,7 @@ export default function Cart() {
                                 <img src={url} alt="" />
 
                             </section>
-                            <section>
+                            <section className='shop-container__items__name'>
                                 <p>{name}</p>
                             </section>
                             <section className='shop-container__items__price'>

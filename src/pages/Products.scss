@@ -70,7 +70,6 @@
                 p {
                     margin-top: .7rem;
                     font-size: small
-
                 }
             }
         }
@@ -108,5 +107,24 @@
             margin-top: 1rem;
             color: cadetblue;
         }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .productSpe__spe__thirdLine,
+    .productSpe__spe__secondLine {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .productSpe__spe__thirdLine {
+        position: relative;
+        right: 30px;
+    }
+
+    .productSpe__slider {
+        text-align: left;
     }
 }
