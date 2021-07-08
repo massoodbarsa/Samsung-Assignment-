@@ -16,7 +16,6 @@ const StyledBadge = withStyles((theme) => ({
     },
 }))(Badge);
 
-
 export default function Navbar() {
 
     const context = useContext(ProductContext)
